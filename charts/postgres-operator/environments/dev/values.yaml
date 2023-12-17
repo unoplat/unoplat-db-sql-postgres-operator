@@ -10,7 +10,9 @@ image:
 # imagePullSecrets:
 # - name: myRegistryKeySecretName
 
-podAnnotations: {}
+podAnnotations: 
+  linkerd.io/inject: enabled
+  config.linkerd.io/skip-inbound-ports: "8080"
 podLabels: {}
 
 configTarget: "OperatorConfigurationCRD"
@@ -107,7 +109,7 @@ configKubernetes:
   cluster_name_label: cluster-name
   # additional annotations to add to every database pod
   custom_pod_annotations:
-    linkerd.io/inject: enabled
+    #linkerd.io/inject: enabled
     
 
   # key name for annotation that compares manifest value with current date

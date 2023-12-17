@@ -7,6 +7,10 @@
 
 
 ## add repo for postgres-operator
+
+kubectl annotate namespace unoplat-db-sql config.linkerd.io/default-inbound-policy=all-authenticated --overwrite
+
+
 helm repo add postgres-operator-charts https://opensource.zalando.com/postgres-operator/charts/postgres-operator
 
 ## install the postgres-operator
