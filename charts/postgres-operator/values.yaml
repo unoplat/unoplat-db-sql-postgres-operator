@@ -10,7 +10,9 @@ image:
 # imagePullSecrets:
 # - name: myRegistryKeySecretName
 
-podAnnotations: {}
+podAnnotations: 
+  linkerd.io/inject: enabled
+  config.linkerd.io/skip-inbound-ports: "8080"
 podLabels: {}
 
 configTarget: "OperatorConfigurationCRD"
@@ -106,9 +108,9 @@ configKubernetes:
   # label assigned to Kubernetes objects created by the operator
   cluster_name_label: cluster-name
   # additional annotations to add to every database pod
-  # custom_pod_annotations:
-  #   keya: valuea
-  #   keyb: valueb
+  custom_pod_annotations:
+    #linkerd.io/inject: enabled
+    
 
   # key name for annotation that compares manifest value with current date
   # delete_annotation_date_key: "delete-date"
@@ -128,7 +130,7 @@ configKubernetes:
   # toggles pod anti affinity on the Postgres pods
   enable_pod_antiaffinity: false
   # toggles PDB to set to MinAvailabe 0 or 1
-  enable_pod_disruption_budget: true
+  enable_pod_disruption_budget: false
   # toogles readiness probe for database pods
   enable_readiness_probe: false
   # enables sidecar containers to run alongside Spilo in the same pod
@@ -465,8 +467,8 @@ resources:
     cpu: 500m
     memory: 500Mi
   requests:
-    cpu: 100m
-    memory: 250Mi
+    cpu: 150m
+    memory: 300Mi
 
 securityContext:
   runAsUser: 1000
