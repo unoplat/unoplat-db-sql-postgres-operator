@@ -73,6 +73,6 @@ jobs:
 
     - name: Create Git Tag
       run: |
-        echo "${{ steps.generate_changelog.outputs.changelog }}" > changelog.txt
+        echo "${{steps.build_changelog.outputs.changelog}}" > changelog.txt
         git tag -a ${{ env.VERSION }} -F changelog.txt
         git push origin ${{ env.VERSION }}
