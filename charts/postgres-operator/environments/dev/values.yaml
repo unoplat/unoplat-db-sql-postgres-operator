@@ -53,7 +53,7 @@ configGeneral:
   # max number of instances in Postgres cluster. -1 = no limit
   max_instances: -1
   # period between consecutive repair requests
-  repair_period: 5m
+  repair_period: 6m
   # period between consecutive sync requests
   resync_period: 30m
   # can prevent certain cases of memory overcommitment
