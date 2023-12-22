@@ -3,6 +3,28 @@ entries:
   postgres-operator:
   - apiVersion: v2
     appVersion: 1.10.1
+    created: "2023-12-22T06:30:28.691993119Z"
+    description: Postgres Operator creates and manages PostgreSQL clusters running
+      in Kubernetes
+    digest: e27fa504cc72cce5bfcaa0ca31cb4f43df5a85e40401add6909585420ddecea2
+    home: https://github.com/zalando/postgres-operator
+    keywords:
+    - postgres
+    - operator
+    - cloud-native
+    - patroni
+    - spilo
+    maintainers:
+    - email: opensource@zalando.de
+      name: Zalando
+    name: postgres-operator
+    sources:
+    - https://github.com/zalando/postgres-operator
+    urls:
+    - https://github.com/unoplat/unoplat-db-sql-postgres-operator/releases/download/postgres-operator-1.11.3-dev/postgres-operator-1.11.3-dev.tgz
+    version: 1.11.3-dev
+  - apiVersion: v2
+    appVersion: 1.10.1
     created: "2023-12-20T14:29:07.539370266Z"
     description: Postgres Operator creates and manages PostgreSQL clusters running
       in Kubernetes
@@ -23,4 +45,4 @@ entries:
     urls:
     - https://github.com/unoplat/unoplat-db-sql-postgres-operator/releases/download/postgres-operator-1.11.2-dev/postgres-operator-1.11.2-dev.tgz
     version: 1.11.2-dev
-generated: "2023-12-20T14:29:07.539380565Z"
+generated: "2023-12-22T06:30:28.692036661Z"
