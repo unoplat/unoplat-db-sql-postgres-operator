@@ -467,7 +467,7 @@ resources:
     cpu: 500m
     memory: 500Mi
   requests:
-    cpu: 150m
+    cpu: 200m
     memory: 300Mi
 
 securityContext:
