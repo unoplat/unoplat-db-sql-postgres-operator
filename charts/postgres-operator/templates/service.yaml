@@ -1,3 +1,4 @@
+# Todo: make target port configurable in values.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -14,6 +15,11 @@ spec:
   - port: 8080
     protocol: TCP
     targetPort: 8080
+    name: operator
+  - name: exporter  # Name for the exporter's metrics port
+    port: 80
+    protocol: TCP
+    targetPort: 9187 
   selector:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/name: {{ template "postgres-operator.name" . }}
