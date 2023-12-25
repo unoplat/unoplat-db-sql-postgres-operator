@@ -15,4 +15,4 @@ maintainers:
 name: postgres-operator
 sources:
 - https://github.com/zalando/postgres-operator
-version: 1.11.3-dev
+version: 1.11.5-dev
