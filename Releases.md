@@ -20,3 +20,10 @@
    - PR: #12
 
 
+## Version v1.11.6-dev
+## 📦 Uncategorized
+
+- enabled observability for all clusters created by operator through ex…
+   - PR: #13
+
+
